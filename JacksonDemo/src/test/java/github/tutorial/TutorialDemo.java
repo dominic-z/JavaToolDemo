@@ -53,29 +53,40 @@ public class TutorialDemo {
         //Object to JSON in String
         String appleJsonInString = defaultMapper.writeValueAsString(apple1);
         System.out.println(appleJsonInString);
-        System.out.println("==========================");
+
+        System.out.println("apples==========================");
         List<Apple> apples = new ArrayList<>();
         apples.add(apple1);
         apples.add(apple2);
         String appleJSONString = defaultMapper.writeValueAsString(apples);
         System.out.println(appleJSONString);
-        System.out.println("==========================");
+
+        System.out.println("appleMap==========================");
         Map<String, Apple> appleMap = new HashMap<>();
         appleMap.put("apple1", apple1);
         appleMap.put("apple2", apple2);
         String appleMapJSONString = defaultMapper.writeValueAsString(appleMap);
         System.out.println(appleMapJSONString);
-        System.out.println("==========================");
+
+        System.out.println("appleMapMap==========================");
+        Map<String,Map<String,Apple>> appleMapMap=new HashMap<>();
+        appleMapMap.put("appleMap",appleMap);
+        String appleMapMapString = defaultMapper.writeValueAsString(appleMapMap);
+        System.out.println(appleMapMapString);
+
+        System.out.println("newApple1==========================");
 //        JSON in string to Object
         Apple newApple1 = defaultMapper.readValue(appleJsonInString, Apple.class);
         System.out.println(newApple1);
-        System.out.println("==========================");
+        System.out.println("newAppleMap1 and newAppleMap2==========================");
         Map<?, ?> newAppleMap1 = defaultMapper.readValue(appleMapJSONString, Map.class);
         System.out.println(newAppleMap1.get("apple1"));
         Map<String, Apple> newAppleMap2 = defaultMapper.readValue(appleMapJSONString, new TypeReference<Map<String, Apple>>() {
         });
         System.out.println(newAppleMap2);
-        System.out.println("==========================");
+        System.out.println("newAppleMapMap==========================");
+        Map<?,?> newAppleMapMap=defaultMapper.readValue(appleMapMapString,Map.class);
+        System.out.println(newAppleMapMap);
 
     }
 
