@@ -87,6 +87,8 @@ public class TutorialDemo {
         System.out.println("newAppleMapMap==========================");
         Map<?,?> newAppleMapMap=defaultMapper.readValue(appleMapMapString,Map.class);
         System.out.println(newAppleMapMap);
+        Map<?,?> appleMap1 = (Map<?, ?>) newAppleMapMap.get("appleMap");
+        System.out.println(appleMap1);
 
     }
 
