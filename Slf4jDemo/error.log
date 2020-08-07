@@ -1,0 +1,9 @@
+2020.08.07 at 16:04:09 CST ERROR Slf4jDemo 19 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:04:23 CST ERROR Slf4jDemo 19 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:04:33 CST ERROR Slf4jDemo 19 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:07:28 CST ERROR Slf4jDemo 20 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:07:52 CST ERROR Slf4jDemo 20 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:08:52 CST ERROR Slf4jDemo 22 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:08:52 CST ERROR Slf4jDemo 47 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:09:07 CST ERROR Slf4jDemo 22 main - log4j2日志输出：This is error message.
+2020.08.07 at 16:09:07 CST ERROR Slf4jDemo 43 main - log4j2日志输出：This is error message.
