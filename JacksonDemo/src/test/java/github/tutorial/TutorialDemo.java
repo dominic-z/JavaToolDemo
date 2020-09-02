@@ -177,6 +177,24 @@ public class TutorialDemo {
     }
 
 
+    @Test
+    public void emptyJsonDemo()  {
+        String jsonStr="{\"i\":0,\"b\":1}";
+        Apple apple = null;
+        try {
+            apple = defaultMapper.readValue(jsonStr, Apple.class);
+            System.out.println(apple);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Apple apple2 = configurableMapper.readValue(jsonStr, Apple.class);
+            System.out.println(apple2);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 class Apple {
