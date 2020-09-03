@@ -13,7 +13,7 @@
         <module>Log4JDemo</module>
         <module>Slf4jDemo</module>
         <module>ProtocolBufferDemo</module>
-        <module>SpringBootDemo</module>
+        <module>Reactor3Demo</module>
     </modules>
 
     <dependencies>

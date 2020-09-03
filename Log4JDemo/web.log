@@ -31,3 +31,8 @@
 2020-08-07 at 15:14:23 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
 2020-08-07 at 15:14:23 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
 2020-08-07 at 15:14:23 CST [INFO ] [log4j2Test] 25 main - mylog
+2020-09-03 at 10:05:18 CST [TRACE] [log4j2Test] 17 main - log4j2日志输出：This is trace message.
+2020-09-03 at 10:05:18 CST [DEBUG] [log4j2Test] 19 main - log4j2日志输出：This is debug message.
+2020-09-03 at 10:05:18 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2020-09-03 at 10:05:18 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2020-09-03 at 10:05:18 CST [INFO ] [log4j2Test] 25 main - mylog
