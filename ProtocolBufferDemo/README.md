@@ -20,9 +20,9 @@ protoc -I=. --java_out=. examples/*.proto
 2. 生成的代码大差不差，不过proto2生成的代码里会多一些方法，例如`hasXXX`，对于`repeated`字段还有`getXXXCount`等方法，proto3语法生成的代码就没有这些方法
 
 # 利用maven插件进行批量protoc
-利用pom插件，`mvn protobuf:compile`生成的class文件会在target\generated class下面。目前我发现只能生成class文件
+利用pom插件，`mvn protobuf:compile`生成的class文件会在target\generated class下面。目前我发现只能生成class文件，并且这些class文件可以被idea直接解析使用
 
-另外，直接单独对ProtocolBufferDemo这个子model进行`mvn compile`会报错，即使我已经`mvn protobuf:compile`过，说程序包com.example.tutorial.AddressBookProtos不存在，这也就是说直接打包子model的话，还是需要真实存在的java文件才行。
+另外，直接单独对ProtocolBufferDemo这个子model进行`mvn compile`会报错，即使我已经`mvn protobuf:compile`过，说程序包com.Example.tutorial.AddressBookProtos不存在，这也就是说直接打包子model的话，还是需要真实存在的java文件才行。
 
 但如果对父项目JavaToolDemo进行整体`mvn compile`，就能成功地对所有子项目编译成功。proto的文件也能成功生成class代码并放入target\classes
 

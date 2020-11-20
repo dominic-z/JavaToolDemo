@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>JavaToolDemo</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>org.Example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -24,6 +24,7 @@
 
     <build>
         <extensions>
+<!--            一个用来检测系统格式的插件-->
             <extension>
                 <groupId>kr.motd.maven</groupId>
                 <artifactId>os-maven-plugin</artifactId>
@@ -38,7 +39,8 @@
                 <version>0.6.1</version>
                 <configuration>
                     <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
-                    <protoSourceRoot>${project.basedir}/src/main/java/examples</protoSourceRoot>
+<!--                    指定protos路径-->
+                    <protoSourceRoot>${project.basedir}/src/main/java/protos</protoSourceRoot>
                 </configuration>
                 <executions>
                     <execution>

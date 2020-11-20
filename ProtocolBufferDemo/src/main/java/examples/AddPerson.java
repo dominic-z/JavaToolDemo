@@ -8,9 +8,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-class AddPerson {
+public class AddPerson {
     // This function fills in a Person message based on user input.
-    static Person PromptForAddress() {
+    public static Person PromptForAddress() {
         Person.Builder person = Person.newBuilder();
 
         System.out.println("Enter person ID: ");

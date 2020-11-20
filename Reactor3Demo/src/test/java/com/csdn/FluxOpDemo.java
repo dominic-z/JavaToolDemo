@@ -31,7 +31,7 @@ public class FluxOpDemo {
 
         StepVerifier.create(
                 Flux.just("flux", "mono")
-                        .flatMap(s -> Flux.fromArray(s.split("\\s*"))   // 1
+                        .flatMap(s -> Flux.fromArray(s.split("\\s*"))   // 1 map的功能是对流里的每一个元素进行处理，而flatMap的功能是将每一个元素处理为一个Flux的流，然后把这些个flux拍扁拍成唯一一个流
                                 .delayElements(Duration.ofMillis(100))) // 2
                         .doOnNext(System.out::print)) // 3
                 .expectNextCount(8) // 4

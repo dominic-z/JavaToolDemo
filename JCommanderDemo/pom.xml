@@ -9,13 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>JacksonDemo</artifactId>
+    <artifactId>JCommanderDemo</artifactId>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.10.2</version>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.78</version>
         </dependency>
 
     </dependencies>
