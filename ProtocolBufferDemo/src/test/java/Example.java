@@ -1,6 +1,7 @@
 import com.example.tutorial.AddressBookProtos;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.Timestamp;
 import examples.AddPerson;
 import org.junit.Test;
 import pkg1.S1;
@@ -15,6 +16,17 @@ import java.util.Arrays;
  * @date 2020/11/20 下午7:43
  */
 public class Example {
+    @Test
+    public void constructMessage(){
+        AddressBookProtos.Person.Builder personBuilder= AddressBookProtos.Person.newBuilder();
+        personBuilder.setId(1);
+        personBuilder.setName("name");
+        personBuilder.setLastUpdated(Timestamp.newBuilder().setSeconds(123).build());
+        AddressBookProtos.AddressBook.Builder addressBookBuilder=AddressBookProtos.AddressBook.newBuilder();
+        addressBookBuilder.addPeople(personBuilder);
+        System.out.println(addressBookBuilder.build());
+    }
+
     @Test
     public void serialization() throws InvalidProtocolBufferException {
         AddressBookProtos.Person person=AddPerson.PromptForAddress();
