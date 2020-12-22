@@ -16,6 +16,7 @@
         <module>Reactor3Demo</module>
         <module>JCommanderDemo</module>
         <module>LombokDemo</module>
+        <module>LangBasic</module>
     </modules>
 
     <dependencies>
