@@ -9,6 +9,7 @@ import org.junit.Test;
 public class Demo {
     @Test
     public void testMin(){
-        System.out.println(0-Integer.MIN_VALUE);
     }
+
+
 }
