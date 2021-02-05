@@ -1,3 +1,4 @@
+import domain.Banana;
 import org.junit.Test;
 
 /**
@@ -8,7 +9,9 @@ import org.junit.Test;
  */
 public class Demo {
     @Test
-    public void testMin(){
+    public void test(){
+        Banana banana=null;
+        System.out.println("banana:"+banana);
     }
 
 
