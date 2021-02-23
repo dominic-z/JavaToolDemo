@@ -8,10 +8,37 @@ import org.junit.Test;
  * @Version 1.0
  */
 public class Demo {
+
+    class Base{
+
+        Base(int i){
+            this.name=i;
+        }
+        public int name;
+
+        public void display(){
+            System.out.println("Base"+name);
+        }
+    }
+
+    class Derive extends Base{
+        public int name;
+
+        Derive(int i) {
+            super(0);
+            this.name=20;
+        }
+
+        @Override
+        public void display() {
+            System.out.println("derive"+name);
+        }
+    }
+
     @Test
     public void test(){
-        Banana banana=null;
-        System.out.println("banana:"+banana);
+        Base derive=new Derive(10);
+        derive.display();
     }
 
 
