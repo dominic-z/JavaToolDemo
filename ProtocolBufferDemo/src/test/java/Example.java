@@ -14,6 +14,7 @@ import java.util.Arrays;
 /**
  * @author dominiczhu
  * @date 2020/11/20 下午7:43
+ * 需要先mvn compile
  */
 public class Example {
     @Test
@@ -36,6 +37,23 @@ public class Example {
 
         AddressBookProtos.Person newPerson=AddressBookProtos.Person.parseFrom(person.toByteString());
         System.out.println(newPerson);
+
+        AddressBookProtos.Person newPerson2=AddressBookProtos.Person.parseFrom(person.toByteArray());
+        System.out.println(newPerson2);
+    }
+
+    @Test
+    public void mergeFromTest() throws InvalidProtocolBufferException {
+        AddressBookProtos.Person person1=AddPerson.PromptForAddress();
+        AddressBookProtos.Person person2=AddPerson.PromptForAddress();
+        System.out.println(person1);
+
+
+        AddressBookProtos.Person.Builder builder = AddressBookProtos.Person.newBuilder();
+        builder.mergeFrom(person1);
+        builder.mergeFrom(person2);
+//        有builder有该方法，合并另外一个message对象，非repeated字段会覆盖，repeated字段则合并两个集合
+        System.out.println(builder.build().getPhonesCount());
     }
 
     @Test
