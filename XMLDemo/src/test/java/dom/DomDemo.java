@@ -56,15 +56,16 @@ public class DomDemo {
         Document document = getDoc();
 
         Set<String> cityNames = new HashSet<>();
-        cityNames.add("张掖市");
-        cityNames.add("天水市");
+        cityNames.add("辽宁省");
 
         Set<Element> descendants = new HashSet<>();
-        findTargetNodes(document.getRootElement(),descendants,cityNames,false);
-
-        for(Element e:descendants){
-            System.out.println(e.attribute("gb_code"));
+        findTargetNodes(document.getRootElement(), descendants, cityNames, false);
+        System.out.println(System.currentTimeMillis());
+        for (Element e : descendants) {
+            System.out.println("cname: " + e.attribute("cname").getValue() + "\tgb_code: " + e.attribute("gb_code").getValue());
         }
+        System.out.println(System.currentTimeMillis());
+
     }
 
     private void findTargetNodes(Element node, Set<Element> descendants, Set<String> cityNames, Boolean isDescendants) {
