@@ -18,6 +18,7 @@
         <module>LombokDemo</module>
         <module>LangBasic</module>
         <module>FastJsonDemo</module>
+        <module>XMLDemo</module>
     </modules>
 
     <dependencies>

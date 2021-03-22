@@ -1,6 +1,8 @@
 import domain.Banana;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 /**
  * @title Demo
  * @Author dominiczhu
@@ -37,8 +39,7 @@ public class Demo {
 
     @Test
     public void test(){
-        Base derive=new Derive(10);
-        derive.display();
+
     }
 
 
