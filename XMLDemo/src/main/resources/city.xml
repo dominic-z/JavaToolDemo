@@ -1,4 +1,4 @@
-<targeting id="2000000" name="Area" status="active" cname="地点（正在）" wiki_page="http://spa.oa.com/wiki/当前地域" targetingbunch="true" lowerbound="2000001" upperbound="4000000">
+<targeting id="2000000" name="Area" status="active" cname="地点（正在）" targetingbunch="true" lowerbound="2000001" upperbound="4000000">
 
     <targeting id="2000001" status="active" cname="中国未知" lowerbound="2000050" upperbound="2000100" name="980000" deprecated_code="362" gb_code="0156" alien_id="0156" sname="本地">
     </targeting>
