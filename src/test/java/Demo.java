@@ -1,8 +1,3 @@
-import domain.Banana;
-import org.junit.Test;
-
-import java.util.ArrayList;
-
 /**
  * @title Demo
  * @Author dominiczhu
@@ -11,36 +6,6 @@ import java.util.ArrayList;
  */
 public class Demo {
 
-    class Base{
-
-        Base(int i){
-            this.name=i;
-        }
-        public int name;
-
-        public void display(){
-            System.out.println("Base"+name);
-        }
-    }
-
-    class Derive extends Base{
-        public int name;
-
-        Derive(int i) {
-            super(0);
-            this.name=20;
-        }
-
-        @Override
-        public void display() {
-            System.out.println("derive"+name);
-        }
-    }
-
-    @Test
-    public void test(){
-
-    }
 
 
 }
