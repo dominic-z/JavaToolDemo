@@ -30,7 +30,7 @@ public class SerializerFeatureDemo {
         Student newStu = JSON.parseObject(jsonString, Student.class);
         System.out.println(newStu);
 
-        String featureString = JSON.toJSONString(stu, SerializerFeature.WriteMapNullValue);
+        String featureString = JSON.toJSONString(stu, SerializerFeature.WriteMapNullValue,SerializerFeature.UseSingleQuotes);
         System.out.println(featureString);
     }
 }
