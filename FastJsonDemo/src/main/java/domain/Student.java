@@ -1,5 +1,6 @@
 package domain;
 
+import domain.enums.Gender;
 import lombok.Data;
 import lombok.ToString;
 
@@ -14,5 +15,6 @@ import lombok.ToString;
 public class Student {
    private String name;
    private int age;
+   private Gender gender;
 
 }
