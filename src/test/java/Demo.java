@@ -1,3 +1,8 @@
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @title Demo
  * @Author dominiczhu
@@ -6,6 +11,15 @@
  */
 public class Demo {
 
+    @Test
+    public void demo(){
+
+        try {
+            throw new Exception("temp");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 
 
 }

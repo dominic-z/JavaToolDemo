@@ -157,6 +157,8 @@ public class TutorialDemo {
         configurableMapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
     }
 
+
+
     AnnoBean bean1;
     AnnoBean bean2;
 
