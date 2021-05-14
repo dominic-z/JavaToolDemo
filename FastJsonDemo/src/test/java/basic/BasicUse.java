@@ -39,6 +39,7 @@ public class BasicUse {
         JSONObject json=new JSONObject();
         json.put("abc","");
         System.out.println(json.toJSONString());
+        System.out.println(json.getString("dcf"));
     }
 
 
