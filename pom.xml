@@ -19,6 +19,7 @@
         <module>LangBasic</module>
         <module>FastJsonDemo</module>
         <module>XMLDemo</module>
+        <module>httpclient-demo</module>
     </modules>
 
     <dependencies>

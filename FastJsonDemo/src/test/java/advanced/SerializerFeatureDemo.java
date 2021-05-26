@@ -1,6 +1,7 @@
 package advanced;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import domain.Student;
@@ -34,6 +35,16 @@ public class SerializerFeatureDemo {
         // 支持直接对单引号进行转换
         JSONObject stuJsonObj = JSON.parseObject(singleQuotesStu);
         System.out.println(stuJsonObj);
+
+        System.out.println(JSON.toJSONString(stuJsonObj,SerializerFeature.UseSingleQuotes));
+
+        JSONObject sparkParams = new JSONObject();
+        JSONArray tableInfos = new JSONArray();
+        JSONObject tableInfo = new JSONObject();
+        tableInfo.put("a","b");
+        tableInfos.add(tableInfo);
+        sparkParams.put("tableInfos",JSON.toJSONString(tableInfos,SerializerFeature.UseSingleQuotes));
+        System.out.println(sparkParams.toJSONString());
 
     }
 
