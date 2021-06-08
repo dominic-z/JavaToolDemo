@@ -38,3 +38,19 @@
 2020-08-07 at 16:09:07 CST [DEBUG] [Slf4jDemo] 39 main - log4j2日志输出：This is debug message.
 2020-08-07 at 16:09:07 CST [INFO ] [Slf4jDemo] 41 main - log4j2日志输出：This is info message.
 2020-08-07 at 16:09:07 CST [ERROR] [Slf4jDemo] 43 main - log4j2日志输出：This is error message.
+2021-06-08 at 10:47:30 CST [TRACE] [Slf4jDemo] 29 main - log4j2日志输出：This is trace message.
+2021-06-08 at 10:47:30 CST [DEBUG] [Slf4jDemo] 31 main - log4j2日志输出：This is debug message.
+2021-06-08 at 10:47:30 CST [INFO ] [Slf4jDemo] 33 main - log4j2日志输出：This is info message.
+2021-06-08 at 10:47:30 CST [ERROR] [Slf4jDemo] 35 main - log4j2日志输出：This is error message.
+2021-06-08 at 10:47:55 CST [TRACE] [Slf4jDemo] 29 main - log4j2日志输出：This is trace message.
+2021-06-08 at 10:47:55 CST [DEBUG] [Slf4jDemo] 31 main - log4j2日志输出：This is debug message.
+2021-06-08 at 10:47:55 CST [INFO ] [Slf4jDemo] 33 main - log4j2日志输出：This is info message.
+2021-06-08 at 10:47:55 CST [ERROR] [Slf4jDemo] 35 main - log4j2日志输出：This is error message.
+2021-06-08 at 10:49:01 CST [TRACE] [Slf4jDemo] 30 main - log4j2日志输出：This is trace message.
+2021-06-08 at 10:49:01 CST [DEBUG] [Slf4jDemo] 32 main - log4j2日志输出：This is debug message.
+2021-06-08 at 10:49:01 CST [INFO ] [Slf4jDemo] 34 main - log4j2日志输出：This is info message.
+2021-06-08 at 10:49:01 CST [ERROR] [Slf4jDemo] 36 main - log4j2日志输出：This is error message.
+2021-06-08 at 10:50:34 CST [TRACE] [Slf4jDemo] 29 main - log4j2日志输出：This is trace message.
+2021-06-08 at 10:50:34 CST [DEBUG] [Slf4jDemo] 31 main - log4j2日志输出：This is debug message.
+2021-06-08 at 10:50:34 CST [INFO ] [Slf4jDemo] 33 main - log4j2日志输出：This is info message.
+2021-06-08 at 10:50:34 CST [ERROR] [Slf4jDemo] 35 main - log4j2日志输出：This is error message.
