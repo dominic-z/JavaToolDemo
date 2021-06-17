@@ -29,15 +29,16 @@ public class BasicUse {
     }
 
     @Test
-    public void toStringMap(){
+    public void toStringMap() {
         String jsonString = "{\"name\":\"jacky\",\"time\":1563957295755,\"age\":23}";
-        Map<String, String> map = JSON.parseObject(jsonString, new TypeReference<Map<String, String>>(){});
+        Map<String, String> map = JSON.parseObject(jsonString, new TypeReference<Map<String, String>>() {
+        });
 
         System.out.println(map);
         System.out.println(map.get("name"));
 
-        JSONObject json=new JSONObject();
-        json.put("abc","");
+        JSONObject json = new JSONObject();
+        json.put("abc", "");
         System.out.println(json.toJSONString());
         System.out.println(json.getString("dcf"));
     }
@@ -58,5 +59,18 @@ public class BasicUse {
         });
         System.out.println(stuList);
 
+    }
+
+    @Test
+    public void getListObj() {
+        List<Student> students = new ArrayList<>();
+        students.add(getStudent());
+        students.add(getStudent());
+
+        JSONObject inputObj = new JSONObject();
+        inputObj.put("students", students);
+        List<Student> stuList = inputObj.getObject("students", new TypeReference<List<Student>>() {
+        });
+        System.out.println(stuList);
     }
 }
