@@ -73,4 +73,12 @@ public class BasicUse {
         });
         System.out.println(stuList);
     }
+
+    @Test
+    public void getObj() {
+        JSONObject json = new JSONObject();
+        json.put("gender", Gender.FEMALE);
+
+        System.out.println(json.getObject("gender", Gender.class));
+    }
 }
