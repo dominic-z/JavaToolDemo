@@ -75,10 +75,19 @@ public class BasicUse {
     }
 
     @Test
-    public void getObj() {
-        JSONObject json = new JSONObject();
-        json.put("gender", Gender.FEMALE);
+    public void getEnumObj() {
+        JSONObject enumJson = new JSONObject();
+        enumJson.put("gender", Gender.FEMALE);
 
-        System.out.println(json.getObject("gender", Gender.class));
+        System.out.println(enumJson.getObject("gender", Gender.class));
+
+    }
+
+    @Test
+    public void obj2JsonObj() {
+        JSONObject stuJson = (JSONObject) JSON.toJSON(new Student());
+        stuJson.put("other", "other");
+        Student student = JSON.parseObject(stuJson.toJSONString(), Student.class);
+        System.out.println(student);
     }
 }
