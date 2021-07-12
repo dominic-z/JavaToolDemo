@@ -4,5 +4,6 @@
   "external": "external",
   "code": "code",
   "nameOnlyForSet": "nameOnlyForSet",
-  "foo": "foo"
+  "foo": "foo",
+  "today": "20210710"
 }

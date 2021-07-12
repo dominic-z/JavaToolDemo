@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -71,6 +72,7 @@ public class SimpleUse {
 class Child {
     private String name;
     private FruitBasket fruitBasket;
+    private Date birthDay;
 }
 
 @Data

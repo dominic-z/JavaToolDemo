@@ -8,6 +8,6 @@ package domain;
  */
 public class Banana {
     public String name;
-
+    public Long i;
 
 }

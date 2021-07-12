@@ -1,3 +1,4 @@
+import domain.Banana;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,6 +14,15 @@ public class Demo {
 
     @Test
     public void demo(){
+
+        Banana banana = new Banana();
+        if(banana.i==1){
+            System.out.println(banana.i);
+        }
+
+        if(banana!=null){
+
+        }
 
         try {
             throw new Exception("temp");

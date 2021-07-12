@@ -1,6 +1,7 @@
 package github.tutorial;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,6 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -186,6 +188,7 @@ public class TutorialDemo {
         try {
             apple = defaultMapper.readValue(jsonStr, Apple.class);
             System.out.println(apple);
+            System.out.println(defaultMapper.writeValueAsString(apple));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -193,6 +196,7 @@ public class TutorialDemo {
         try {
             Apple apple2 = configurableMapper.readValue(jsonStr, Apple.class);
             System.out.println(apple2);
+            System.out.println(configurableMapper.writeValueAsString(apple2));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -310,6 +314,17 @@ class AnnoBean {
     @JsonIgnore
     public String getNameOnlyForSet() {
         return _nameOnlyForSet;
+    }
+
+    @JsonFormat(pattern = "yyyyMMdd")
+    private Date today;
+
+    public Date getToday() {
+        return today;
+    }
+
+    public void setToday(Date today) {
+        this.today = today;
     }
 
     @Override

@@ -7,7 +7,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -44,12 +46,13 @@ public class ConfigJackson {
     public void init() {
         configurableMapper = new ObjectMapper();
         configurableMapper.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES,true);
-
+        configurableMapper.setDateFormat(new SimpleDateFormat("yyyyMMdd"));
         fruitBasket = get(1);
 
         child=new Child();
         child.setFruitBasket(fruitBasket);
         child.setName("kid");
+        child.setBirthDay(new Date());
     }
 
     @Test
