@@ -101,20 +101,23 @@ public class BasicUse {
         System.out.println(withoutEscapeJSON.getObject("student", Student.class));
         System.out.println("raw string " + withoutEscapeJSON.getString("student"));
 
-        Object stuJson = JSON.toJSON(withoutEscapeJSON.getString("student"));
+        String stuJson = (String) JSON.toJSON(withoutEscapeJSON.getString("student"));
         System.out.println("stuJson " + stuJson);
 
 
         System.out.println("=========================================");
 
-        String withEscapeStr = "{\"student\":\"{\\\"name\\\":\\\"jacky\\\",\\\"time\\\":1563957295755,\\\"age\\\":23}\"}";
+        String withEscapeStr = "{\"students\":\"[{\\\"name\\\":\\\"jacky\\\",\\\"time\\\":1563957295755,\\\"age\\\":23}]\"}";
         JSONObject withEscapeJSON = JSON.parseObject(withEscapeStr);
 
         System.out.println(withEscapeJSON.toJSONString());
 //        System.out.println(withEscapeJSON.getObject("student",Student.class));
-        System.out.println("raw string " + withEscapeJSON.getString("student"));
-        stuJson = JSON.toJSON(withEscapeJSON.getString("student"));
-        System.out.println("stuJson " + stuJson);
+        System.out.println("raw string " + withEscapeJSON.getString("students"));
+        System.out.println("toJson " + JSON.toJSON(withEscapeJSON.getString("students")));
+        List<Student> students = JSON.parseObject(withEscapeJSON.getString("students"),
+                new TypeReference<List<Student>>() {
+                });
+        System.out.println("students " + students);
 
     }
 
