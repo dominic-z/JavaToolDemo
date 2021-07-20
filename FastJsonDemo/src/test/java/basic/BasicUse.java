@@ -28,6 +28,7 @@ public class BasicUse {
         return stu;
     }
 
+
     @Test
     public void toStringMap() {
         String jsonString = "{\"name\":\"jacky\",\"time\":1563957295755,\"age\":23}";
@@ -90,4 +91,31 @@ public class BasicUse {
         Student student = JSON.parseObject(stuJson.toJSONString(), Student.class);
         System.out.println(student);
     }
+
+    @Test
+    public void EscapeChapter() {
+        String withoutEscapeStr = "{\"student\":{\"name\":\"jacky\",\"time\":1563957295755,\"age\":23}}";
+        JSONObject withoutEscapeJSON = JSON.parseObject(withoutEscapeStr);
+
+        System.out.println(withoutEscapeJSON.toJSONString());
+        System.out.println(withoutEscapeJSON.getObject("student", Student.class));
+        System.out.println("raw string " + withoutEscapeJSON.getString("student"));
+
+        Object stuJson = JSON.toJSON(withoutEscapeJSON.getString("student"));
+        System.out.println("stuJson " + stuJson);
+
+
+        System.out.println("=========================================");
+
+        String withEscapeStr = "{\"student\":\"{\\\"name\\\":\\\"jacky\\\",\\\"time\\\":1563957295755,\\\"age\\\":23}\"}";
+        JSONObject withEscapeJSON = JSON.parseObject(withEscapeStr);
+
+        System.out.println(withEscapeJSON.toJSONString());
+//        System.out.println(withEscapeJSON.getObject("student",Student.class));
+        System.out.println("raw string " + withEscapeJSON.getString("student"));
+        stuJson = JSON.toJSON(withEscapeJSON.getString("student"));
+        System.out.println("stuJson " + stuJson);
+
+    }
+
 }
