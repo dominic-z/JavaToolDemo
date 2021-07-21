@@ -101,13 +101,14 @@ public class BasicUse {
         System.out.println(withoutEscapeJSON.getObject("student", Student.class));
         System.out.println("raw string " + withoutEscapeJSON.getString("student"));
 
-        String stuJson = (String) JSON.toJSON(withoutEscapeJSON.getString("student"));
-        System.out.println("stuJson " + stuJson);
+        Student student = JSON.parseObject(withoutEscapeJSON.getString("student"), Student.class);
+        System.out.println("student " + student);
 
 
         System.out.println("=========================================");
 
-        String withEscapeStr = "{\"students\":\"[{\\\"name\\\":\\\"jacky\\\",\\\"time\\\":1563957295755,\\\"age\\\":23}]\"}";
+        String withEscapeStr = "{\"students\":\"[{\\\"name\\\":\\\"jacky\\\",\\\"time\\\":1563957295755," +
+                "\\\"age\\\":23}]\"}";
         JSONObject withEscapeJSON = JSON.parseObject(withEscapeStr);
 
         System.out.println(withEscapeJSON.toJSONString());
