@@ -1,6 +1,7 @@
 package basic;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import domain.Student;
@@ -8,6 +9,8 @@ import domain.enums.Gender;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,10 +27,22 @@ public class BasicUse {
         stu.setAge(10);
 //        stu.setName("dom");
         stu.setGender(Gender.MALE);
+        stu.setBirthDay(new Date());
 
         return stu;
     }
 
+
+    @Test
+    public void toBytes(){
+
+        Map<String,byte[]> map = new HashMap<>();
+
+        map.put("abc","你好".getBytes());
+        String jsonString = JSON.toJSONString(map);
+        System.out.println(jsonString);
+
+    }
 
     @Test
     public void toStringMap() {
@@ -119,6 +134,9 @@ public class BasicUse {
                 new TypeReference<List<Student>>() {
                 });
         System.out.println("students " + students);
+
+        JSONArray studentJSONArray = JSON.parseArray(withEscapeJSON.getString("students"));
+        System.out.println("studentJSONArray " + studentJSONArray);
 
     }
 
