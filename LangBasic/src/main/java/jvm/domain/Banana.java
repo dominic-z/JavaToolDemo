@@ -1,4 +1,4 @@
-package jvm.loadjvm.domain;
+package jvm.domain;
 
 /**
  * @author dominiczhu

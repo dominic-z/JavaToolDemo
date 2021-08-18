@@ -1,4 +1,4 @@
-package jvm.loadjvm;
+package jvm.loadclass;
 
 /**
  * @author dominiczhu

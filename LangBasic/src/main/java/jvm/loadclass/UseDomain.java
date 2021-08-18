@@ -1,6 +1,6 @@
-package jvm.loadjvm;
+package jvm.loadclass;
 
-import jvm.loadjvm.domain.Banana;
+import jvm.domain.Banana;
 
 /**
  * @author dominiczhu
