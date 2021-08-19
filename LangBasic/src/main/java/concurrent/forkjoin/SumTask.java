@@ -1,4 +1,4 @@
-package concurent.forkjoin;
+package concurrent.forkjoin;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
