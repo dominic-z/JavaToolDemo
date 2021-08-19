@@ -16,24 +16,35 @@ public class MethodLookupInvoke {
         new Exception().printStackTrace();
     }
 
-    private Integer getInt(String s) {
+    private Integer getInt(String s, float f, Long l) {
+        System.out.println(l);
         System.out.println(s);
-        return 10;
+        return (int) f;
     }
 
     public static void main(String[] args) throws Throwable {
         MethodHandles.Lookup l = MethodHandles.lookup();
         MethodType barType = MethodType.methodType(void.class, Object.class);
         MethodHandle bar = l.findStatic(MethodLookupInvoke.class, "bar", barType);
-
+        System.out.println("=========invoke static=========");
         bar.invokeExact(new Object());
         bar.invoke("");
 
-        MethodType getIntType = MethodType.methodType(Integer.class, String.class);
+
+        System.out.println("=========invoke method=========");
+        MethodType getIntType = MethodType.methodType(Integer.class, String.class, Float.TYPE, Long.class);
         MethodHandle getInt = l.findVirtual(MethodLookupInvoke.class, "getInt", getIntType);
-        Integer intValue = (Integer) getInt.invoke(new MethodLookupInvoke(), "ssss");
+        System.out.println("getInt type: "+getInt.type());
+        Integer intValue = (Integer) getInt.invokeExact(new MethodLookupInvoke(), "ssss", 12f, new Long(20));
         System.out.println("getInt res: " + intValue);
 
+        MethodHandle bindToGetInt = getInt.bindTo(new MethodLookupInvoke());
+        Integer bindToValue = (Integer) bindToGetInt.invokeExact("ssss", 12f, new Long(20));
+        System.out.println("type: "+bindToValue);
+        System.out.println("bindType: "+bindToGetInt.type());
+
+
+        System.out.println("=========show form=========");
         Field lambdaFormField = MethodHandle.class.getDeclaredField("form");
         lambdaFormField.setAccessible(true);
 
