@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 public class log4j2Test {
 
     private static Logger rootLogger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
-    private static Logger logger = LogManager.getLogger("myLog");
+    private static Logger logger = LogManager.getLogger("custom.log");
 
     public static void main(String[] args) {
 

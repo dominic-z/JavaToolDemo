@@ -36,3 +36,31 @@
 2020-09-03 at 10:05:18 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
 2020-09-03 at 10:05:18 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
 2020-09-03 at 10:05:18 CST [INFO ] [log4j2Test] 25 main - mylog
+2021-09-16 at 14:05:45 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:05:45 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:05:45 CST [INFO ] [log4j2Test] 25 main - mylog
+2021-09-16 at 14:06:15 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:06:15 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:06:15 CST [INFO ] [log4j2Test] 25 main - mylog
+2021-09-16 at 14:06:30 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:06:30 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:06:30 CST [INFO ] [log4j2Test] 25 main - mylog
+2021-09-16 at 14:07:29 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:07:29 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:07:29 CST [INFO ] [log4j2Test] 25 main - mylog
+2021-09-16 at 14:07:42 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:07:42 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:08:08 CST [INFO ] [log4j2Test] 21 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:08:08 CST [ERROR] [log4j2Test] 23 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:13:52 CST [INFO ] [demo.AnnoSlf4jDemo] 20 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:13:52 CST [ERROR] [demo.AnnoSlf4jDemo] 22 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:13:52 CST [ERROR] [demo.AnnoSlf4jDemo] 23 main - [fuck] log4j2日志输出：This is error message. java.lang.RuntimeException: run time
+	at demo.AnnoSlf4jDemo.throwRuntimeExp(demo.AnnoSlf4jDemo.java:28) ~[classes/:?]
+	at demo.AnnoSlf4jDemo.main(demo.AnnoSlf4jDemo.java:23) [classes/:?]
+
+2021-09-16 at 14:14:21 CST [INFO ] [demo.AnnoSlf4jDemo] 20 main - log4j2日志输出：This is info message.
+2021-09-16 at 14:14:21 CST [ERROR] [demo.AnnoSlf4jDemo] 22 main - log4j2日志输出：This is error message.
+2021-09-16 at 14:14:21 CST [ERROR] [demo.AnnoSlf4jDemo] 23 main - [fuck] log4j2日志输出：This is error message. java.lang.RuntimeException: run time
+	at demo.AnnoSlf4jDemo.throwRuntimeExp(demo.AnnoSlf4jDemo.java:28) ~[classes/:?]
+	at demo.AnnoSlf4jDemo.main(demo.AnnoSlf4jDemo.java:23) [classes/:?]
+
