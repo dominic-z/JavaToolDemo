@@ -20,6 +20,7 @@
         <module>FastJsonDemo</module>
         <module>XMLDemo</module>
         <module>httpclient-demo</module>
+        <module>lettuce-demo</module>
     </modules>
 
     <dependencies>
