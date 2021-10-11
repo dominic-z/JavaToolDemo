@@ -24,7 +24,7 @@ public class LettuceConfig {
 
         RedisURI redisUri =
                 RedisURI.builder()
-                        .withHost("9.135.91.214")
+                        .withHost("localhost")
                         .withPort(63790)
                         .withPassword("admin".toCharArray())
                         .withTimeout(Duration.of(10, ChronoUnit.SECONDS))
