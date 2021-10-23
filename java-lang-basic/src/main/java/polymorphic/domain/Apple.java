@@ -18,7 +18,7 @@ public class Apple extends Fruit {
 
     private void showSupper() {
 
-        // 如果访问同名字段，那么子类字段会将父类字段隐藏掉
+        // 如果访问同名字段，即只用name的话，那么子类字段会将父类字段隐藏掉
         System.out.println(super.name);
         System.out.println(this.name);
     }

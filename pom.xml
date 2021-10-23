@@ -16,11 +16,12 @@
         <module>Reactor3Demo</module>
         <module>JCommanderDemo</module>
         <module>LombokDemo</module>
-        <module>LangBasic</module>
+        <module>java-lang-basic</module>
         <module>FastJsonDemo</module>
         <module>XMLDemo</module>
         <module>httpclient-demo</module>
         <module>lettuce-demo</module>
+        <module>jdbc-demo</module>
     </modules>
 
     <dependencies>

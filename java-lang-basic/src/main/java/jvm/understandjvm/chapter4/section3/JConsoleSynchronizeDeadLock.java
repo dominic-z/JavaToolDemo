@@ -20,6 +20,11 @@ public class JConsoleSynchronizeDeadLock {
         @Override
         public void run() {
             synchronized (Integer.valueOf(a)) {
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 synchronized (Integer.valueOf(b)) {
                     System.out.println(a + b);
                 }
@@ -27,10 +32,10 @@ public class JConsoleSynchronizeDeadLock {
         }
     }
     public static void main(String[] args) {
-        for (int i = 0; i < 100; i++) {
+//        for (int i = 0; i < 100; i++) {
             new Thread(new SynAddRunalbe(1, 2)).start();
             new Thread(new SynAddRunalbe(2, 1)).start();
-        }
+//        }
     }
 
 }
