@@ -6,9 +6,8 @@ package generic;
  * @title BST
  * @date 2021/11/13 上午11:10
  */
-// 使用泛型继承另一个泛型的正确用法= =
-public class BST<K extends Comparable<K>, V, N extends Node<K, V>> {
-    N node;
+public class BST<K extends Comparable<K>, V> {
+    Node<K, V> node;
 
     public void show() {
 
