@@ -22,6 +22,7 @@
         <module>httpclient-demo</module>
         <module>lettuce-demo</module>
         <module>jdbc-demo</module>
+        <module>logback-demo</module>
     </modules>
 
     <dependencies>
