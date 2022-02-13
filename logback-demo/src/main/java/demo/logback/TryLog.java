@@ -11,18 +11,25 @@ import demo.logback.util.Loggers;
 public class TryLog {
     public static void main(String[] args) throws Exception {
         Loggers.CONSOLE.info("console info");
-        Loggers.FILTER_CONSOLE.info("FILTER_CONSOLE info");
-        Loggers.FILTER_CONSOLE.warn("FILTER_CONSOLE warn");
-        Loggers.FILTER_CONSOLE.error("FILTER_CONSOLE error");
+        Loggers.ROOT.info("abc");
+        logError();
 
+//        Loggers.FILTER_CONSOLE.info("FILTER_CONSOLE info");
+//        Loggers.FILTER_CONSOLE.warn("FILTER_CONSOLE warn");
+//        Loggers.FILTER_CONSOLE.error("FILTER_CONSOLE error",new Exception());
+//
+//
+//        Loggers.FILE.info("file info");
+//        Loggers.TIME_BASED_ROLLING_FILE.info("rolling_file info");
+//        Thread.sleep(2000);
+//        Loggers.TIME_BASED_ROLLING_FILE.info("rolling_file info");
+//
+//        loopLog();
 
-        Loggers.FILE.info("file info");
-        Loggers.TIME_BASED_ROLLING_FILE.info("rolling_file info");
-        Thread.sleep(2000);
-        Loggers.TIME_BASED_ROLLING_FILE.info("rolling_file info");
+    }
 
-        loopLog();
-
+    private static void logError(){
+        Loggers.CONSOLE.error("console errror",new RuntimeException());
     }
 
     private static void loopLog() throws Exception {

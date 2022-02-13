@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 public class Loggers {
 
     public static final Logger CONSOLE = LoggerFactory.getLogger("console");
+    public static final Logger ROOT = LoggerFactory.getLogger("root");
     public static final Logger FILE = LoggerFactory.getLogger("file");
     public static final Logger TIME_BASED_ROLLING_FILE = LoggerFactory.getLogger("time_based_rolling_file");
     public static final Logger SIZE_BASED_ROLLING_FILE = LoggerFactory.getLogger("size_based_rolling_file");

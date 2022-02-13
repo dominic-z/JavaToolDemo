@@ -2,9 +2,11 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     　　  <!--其他配置省略-->
 
+    <property name="LOG_DIR" value="logback-demo/logs"/>
 
     <appender name="ROOT" class="ch.qos.logback.core.FileAppender">
-        <file>logback-demo/logs/root.log</file>
+        <!--        默认值的写法-->
+        <file>${LOG_DIR1:-logback-demo/logs}/root.log</file>
         <append>true</append>
         <encoder>
             <!--            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>-->
@@ -15,7 +17,9 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] %logger{50} - %msg%n</pattern>
+            <!--            如果没有写%ex，那么log.error会将错误栈打印在下一行里-->
+            <!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] %logger{50} - %msg %ex%n</pattern>-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] %logger{50} - %msg %n</pattern>
         </encoder>
     </appender>
 
@@ -30,7 +34,7 @@
 
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>logback-demo/logs/file.log</file>
+        <file>${LOG_DIR}/file.log</file>
         <append>true</append>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] %logger{50} - %msg%n</pattern>
@@ -38,9 +42,9 @@
     </appender>
 
     <appender name="TIME_BASED_ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logback-demo/logs/rolling-file.log</file>
+        <file>${LOG_DIR}/rolling-file.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logback-demo/logs/time-based-rolling-file.%d{yyyy-MM-dd-HH-mm-ss}.log</fileNamePattern>
+            <fileNamePattern>${LOG_DIR}/time-based-rolling-file.%d{yyyy-MM-dd-HH-mm-ss}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
             <!--  该appender的输出日志总大小不超过1000字节-->
             <totalSizeCap>1000</totalSizeCap>
@@ -53,9 +57,9 @@
 
 
     <appender name="SIZE_BASED_ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logback-demo/logs/size-based-rolling-file.log</file>
+        <file>${LOG_DIR}/size-based-rolling-file.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern>logback-demo/logs/size-based-rolling-file.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_DIR}/size-based-rolling-file.%i.log</fileNamePattern>
             <minIndex>1</minIndex>
             <maxIndex>3</maxIndex>
         </rollingPolicy>
@@ -70,11 +74,11 @@
     </appender>
 
     <appender name="SIZE_AND_TIME_BASED_ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logback-demo/logs/size-and-time-based-rolling-file.log</file>
+        <file>${LOG_DIR}/size-and-time-based-rolling-file.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!--  该appender的拆分规则，首先每个文件不能超过maxFileSize大小，总大小不能超过totalSizeCap-->
             <!--            如果超过了，首先判断时间是否一致，时间一致，则新文件对%i进行递增，时间不一致，则新文件对时间递增，且%i重置为0-->
-            <fileNamePattern>logback-demo/logs/size-and-time-based-rolling-file.%d{yyyy-MM-dd-HH-mm}.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_DIR}/size-and-time-based-rolling-file.%d{yyyy-MM-dd-HH-mm}.%i.log</fileNamePattern>
             <!--  该appender的每个日志总大小不超过1000字节-->
             <maxFileSize>1000</maxFileSize>
             <maxHistory>30</maxHistory>
